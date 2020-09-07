@@ -12,5 +12,5 @@ docker push lfbds/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=lfbds/multi-server:$SHA
-kubectl set image deployments/client-deployment server=lfbds/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=lfbds/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=lfbds/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=lfbds/multi-worker:$SHA
